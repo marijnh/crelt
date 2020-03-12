@@ -4,6 +4,7 @@
   "description": "Tiny DOM-element-creation utility",
   "main": "dist/index.js",
   "module": "index.es.js",
+  "types": "index.d.ts",
   "scripts": {
     "prepare": "rollup -c"
   },
