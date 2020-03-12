@@ -1,16 +1,16 @@
-export default function crelt(elt, ...children) {
+export default function crelt() {
+  var elt = arguments[0]
   if (typeof elt == "string") elt = document.createElement(elt)
-  let i = 0
-  if (children.length && typeof children[0] == "object" && children[0] && children[0].nodeType == null) {
-    let attrs = children[0]
-    for (let name in attrs) if (Object.prototype.hasOwnProperty.call(attrs, name)) {
-      let value = attrs[name]
+  var i = 1, next = arguments[1]
+  if (next && typeof next == "object" && next && next.nodeType == null) {
+    for (var name in next) if (Object.prototype.hasOwnProperty.call(next, name)) {
+      var value = next[name]
       if (typeof value == "string") elt.setAttribute(name, value)
       else if (value != null) elt[name] = value
     }
-    i = 1
+    i++
   }
-  for (; i < children.length; i++) add(elt, children[i])
+  for (; i < arguments.length; i++) add(elt, arguments[i])
   return elt
 }
 
@@ -21,7 +21,7 @@ function add(elt, child) {
   } else if (child.nodeType != null) {
     elt.appendChild(child)
   } else if (child.length != null) {
-    for (let i = 0; i < child.length; i++) add(elt, child[i])
+    for (var i = 0; i < child.length; i++) add(elt, child[i])
   } else {
     throw new RangeError("Unsupported child node: " + child)
   }
