@@ -13,8 +13,8 @@ which is a function that you call with:
    not assigned.
 
  - Any number of children, which may be null (ignored), strings (added
-   as text nodes), DOM nodes (added), or array-like containers (each
-   element is added separately).
+   as text nodes), DOM nodes (added), or arrays (each element is added
+   separately).
 
 The function returns a DOM element.
 
