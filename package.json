@@ -1,6 +1,6 @@
 {
   "name": "crelt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tiny DOM-element-creation utility",
   "main": "dist/index.js",
   "module": "index.es.js",
