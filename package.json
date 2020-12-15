@@ -2,7 +2,12 @@
   "name": "crelt",
   "version": "1.0.4",
   "description": "Tiny DOM-element-creation utility",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "exports": {
+    "import": "./index.es.js",
+    "require": "./dist/index.cjs"
+  },
   "module": "index.es.js",
   "types": "index.d.ts",
   "scripts": {
