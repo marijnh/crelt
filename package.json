@@ -5,10 +5,10 @@
   "main": "dist/index.cjs",
   "type": "module",
   "exports": {
-    "import": "./index.es.js",
+    "import": "./index.js",
     "require": "./dist/index.cjs"
   },
-  "module": "index.es.js",
+  "module": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "prepare": "rollup -c"
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/marijnh/crelt#readme",
   "devDependencies": {
-    "rollup": "^2.0.5"
+    "rollup": "^2.0.5",
+    "rollup-plugin-copy": "^3.4.0"
   }
 }
