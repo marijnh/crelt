@@ -1,3 +1,5 @@
+**This repository has moved to https://code.haverbeke.berlin/marijn/crelt**
+
 # CRELT
 
 Tiny DOM-element creation utility. Exports a single (default) value,
